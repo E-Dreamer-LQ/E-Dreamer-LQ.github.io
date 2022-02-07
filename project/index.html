@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>project - Liuqiang</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">Liuqiang</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">project</a>
+                            </li>
+                            <li class="navitem">
+                                <a href=".." class="nav-link">index</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../about/" class="nav-link">about</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../recent/" class="nav-link">recent</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" class="nav-link disabled">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href=".." class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#_1" class="nav-link">项目成果</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#faster-rcnn" class="nav-link">基于Faster RCNN 的天文目标检测</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_4" class="nav-link">基于深度学习的天文图像分类识别</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_7" class="nav-link">矿井下人的分布式探测与跟踪</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="_1">项目成果</h1>
+<!--哈哈我是注释，不会在浏览器中显示。-->
+<h2 id="faster-rcnn">基于Faster RCNN 的天文目标检测</h2>
+<h3 id="_2">项目描述</h3>
+<p>利用通用目标检测框架应用在天文领域。首先在数据和标签可操控性高的模拟数据进行， 由天文工具 Skymaker 生成，对原始网络架构进行改进，
+模型拟合后，处理真实数据并搭建标注 平台获得标签，做迁移学习，最后和传统方法（SE）比较探测能力来评价神经网络的探测能力。</p>
+<h3 id="_3">职责&amp;业绩</h3>
+<ul>
+<li>模拟近似真实的数据和标签（特殊方法），搭建图像标注平台网站为真实数据制作标签； </li>
+<li>针对通用目标和天文目标异同，目标检测框架改进以达到拟合，对检测框架设计理解深刻； </li>
+<li>真实数据做迁移学习，神经网络相比天文领域目标探测传统方法提升 25%，部署于嵌入式端。</li>
+<li>切入点&amp;困难：a.通用目标-&gt;天文领域；b.网络改进；c.迁移学习策略；d.嵌入式端 qt 界面；</li>
+</ul>
+<style>
+img{
+    width: 60%;
+    padding-left: 20%;
+}
+</style>
+<div align="center">![label_get](label_get.png"模拟数据&真实数据")</div>
+<div align="center">![network](network.png"网络结构")</div>
+<div align="center">![star_result](star_result.png"检测效果")</div>
+
+<h2 id="_4">基于深度学习的天文图像分类识别</h2>
+<h3 id="_5">项目描述</h3>
+<p>对 1000 张施密特望远镜拍摄的天文图像处理，使用天文工具 SE 扫图得到定位目标，最 后“抠图”得到分类对象为星象：噪点：空间碎片
+约 100 : 10 : 1 三类组成的数据集。对比神经网络（CNN &amp; RNN）在低信噪比下的强分类效果，采用一系列分类评价指标，验证擅长处理序列的 RNN 处理图像数据时也具有较好分类效果。</p>
+<h3 id="_6">职责&amp;业绩</h3>
+<ul>
+<li>数据获取+数据清洗（计算 SNR 和 Ellipticity 筛选）+数据增强（解决类别不平衡问题）； </li>
+<li>自主搭建 CNN(Lenet5)和 RNN（LSTM）对比分类已有数据，验证 RNN 也具有强分类能力； </li>
+<li>由于数据自身特性，CNN 分类 acc-98.6%，RNN 分类 acc-97.3%，集成学习后 acc-99.0%。</li>
+<li>切入点&amp;困难：a.CNN 与 RNN 比较；b. RNN 效果改进问题；c.类别不平衡问题；d.集成问题；</li>
+</ul>
+<div align="center">![classification](star_noise_dps.png"数据情况")</div>
+<div align="center">![classification](cls_network.png"CNN网络结构")</div>
+<div align="center">![classification](rnn_network.png"RNN网络结构")</div>
+<div align="center">![classification](classification.png"分类效果")</div>
+
+<h2 id="_7">矿井下人的分布式探测与跟踪</h2>
+<h3 id="_8">项目描述</h3>
+<p>针对矿井下人工监控可持续时间短，易疲劳；多监控视频观察难，数据量大的特点。基于 煤矿视频制作数据集，提出将 YOLOv3 
+应用于井下矿工多目标检测。另外，项目致力于完成一 个多摄像头下的目标跟踪系统，实现持续检测及跟踪人物和为矿井下事故实时预警。</p>
+<h3 id="_9">职责&amp;业绩</h3>
+<ul>
+<li>数据处理（背景帧差法）、搭建标注平台（JS 网站）、并行化标注数据；</li>
+<li>运用 yolov3 算法对视频帧图片检测，运用 DeepSort 算法对煤矿视频数据进行跟踪处理，解决标签聚类问题；</li>
+<li>多摄像头之间共享检测结果（已构思、实践中）。</li>
+<li>切入点&amp;困难：a.数据处理；b.跟踪 label 聚类问题；c. 模型加速问题；d.跟踪信息传输；</li>
+</ul>
+<div align="center">![yolov3_detect](yolov3_detect.png"井下检测效果")</div></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
