@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>project - Liuqiang</title>
+        <title>work - Liuqiang</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -33,11 +33,11 @@
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li class="navitem">
-                                <a href="../work/" class="nav-link">work</a>
-                            </li>
                             <li class="navitem active">
-                                <a href="./" class="nav-link">project</a>
+                                <a href="./" class="nav-link">work</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../project/" class="nav-link">project</a>
                             </li>
                             <li class="navitem">
                                 <a href=".." class="nav-link">index</a>
@@ -54,12 +54,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../work/" class="nav-link">
+                                <a rel="prev" class="nav-link disabled">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href=".." class="nav-link">
+                                <a rel="next" href="../project/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -81,17 +81,33 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#_1" class="nav-link">项目成果</a>
+            <li class="nav-item" data-level="1"><a href="#work" class="nav-link">Work</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#faster-rcnn" class="nav-link">基于Faster RCNN 的天文目标检测</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#_4" class="nav-link">基于深度学习的天文图像分类识别</a>
+            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">项目实战</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#_7" class="nav-link">矿井下人的分布式探测与跟踪</a>
+            <li class="nav-item" data-level="2"><a href="#xmapper" class="nav-link">Xmapper数据可视化平台</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_5" class="nav-link">立体感知传感器标定</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_9" class="nav-link">虚拟仿真数据项目——数据生成链路</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_13" class="nav-link">虚拟仿真数据项目——原子化交通流设计</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#tof" class="nav-link">Tof手势识别项目</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#xbrain" class="nav-link">xbrain自主运维自动驾驶集群小车项目</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -102,57 +118,62 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="_1">项目成果</h1>
-<!--哈哈我是注释，不会在浏览器中显示。-->
-<h2 id="faster-rcnn">基于Faster RCNN 的天文目标检测</h2>
-<h3 id="_2">项目描述</h3>
-<p>利用通用目标检测框架应用在天文领域。首先在数据和标签可操控性高的模拟数据进行， 由天文工具 Skymaker 生成，对原始网络架构进行改进，
-模型拟合后，处理真实数据并搭建标注 平台获得标签，做迁移学习，最后和传统方法（SE）比较探测能力来评价神经网络的探测能力。</p>
-<h3 id="_3">职责&amp;业绩</h3>
-<ul>
-<li>模拟近似真实的数据和标签（特殊方法），搭建图像标注平台网站为真实数据制作标签； </li>
-<li>针对通用目标和天文目标异同，目标检测框架改进以达到拟合，对检测框架设计理解深刻； </li>
-<li>真实数据做迁移学习，神经网络相比天文领域目标探测传统方法提升 25%，部署于嵌入式端。</li>
-<li>切入点&amp;困难：a.通用目标-&gt;天文领域；b.网络改进；c.迁移学习策略；d.嵌入式端 qt 界面；</li>
-</ul>
-<style>
-img{
-    width: 60%;
-    padding-left: 20%;
-}
-</style>
-<div align="center">![label_get](label_get.png"模拟数据&真实数据")</div>
-<div align="center">![network](network.png"网络结构")</div>
-<div align="center">![star_result](star_result.png"检测效果")</div>
-
-<h2 id="_4">基于深度学习的天文图像分类识别</h2>
-<h3 id="_5">项目描述</h3>
-<p>对 1000 张施密特望远镜拍摄的天文图像处理，使用天文工具 SE 扫图得到定位目标，最 后“抠图”得到分类对象为星象：噪点：空间碎片
-约 100 : 10 : 1 三类组成的数据集。对比神经网络（CNN &amp; RNN）在低信噪比下的强分类效果，采用一系列分类评价指标，验证擅长处理序列的 RNN 处理图像数据时也具有较好分类效果。</p>
-<h3 id="_6">职责&amp;业绩</h3>
-<ul>
-<li>数据获取+数据清洗（计算 SNR 和 Ellipticity 筛选）+数据增强（解决类别不平衡问题）； </li>
-<li>自主搭建 CNN(Lenet5)和 RNN（LSTM）对比分类已有数据，验证 RNN 也具有强分类能力； </li>
-<li>由于数据自身特性，CNN 分类 acc-98.6%，RNN 分类 acc-97.3%，集成学习后 acc-99.0%。</li>
-<li>切入点&amp;困难：a.CNN 与 RNN 比较；b. RNN 效果改进问题；c.类别不平衡问题；d.集成问题；</li>
-</ul>
-<div align="center">![classification](star_noise_dps.png"数据情况")</div>
-<div align="center">![classification](cls_network.png"CNN网络结构")</div>
-<div align="center">![classification](rnn_network.png"RNN网络结构")</div>
-<div align="center">![classification](classification.png"分类效果")</div>
-
-<h2 id="_7">矿井下人的分布式探测与跟踪</h2>
-<h3 id="_8">项目描述</h3>
-<p>针对矿井下人工监控可持续时间短，易疲劳；多监控视频观察难，数据量大的特点。基于 煤矿视频制作数据集，提出将 YOLOv3 
-应用于井下矿工多目标检测。另外，项目致力于完成一 个多摄像头下的目标跟踪系统，实现持续检测及跟踪人物和为矿井下事故实时预警。</p>
-<h3 id="_9">职责&amp;业绩</h3>
-<ul>
-<li>数据处理（背景帧差法）、搭建标注平台（JS 网站）、并行化标注数据；</li>
-<li>运用 yolov3 算法对视频帧图片检测，运用 DeepSort 算法对煤矿视频数据进行跟踪处理，解决标签聚类问题；</li>
-<li>多摄像头之间共享检测结果（已构思、实践中）。</li>
-<li>切入点&amp;困难：a.数据处理；b.跟踪 label 聚类问题；c. 模型加速问题；d.跟踪信息传输；</li>
-</ul>
-<div align="center">![yolov3_detect](yolov3_detect.png"井下检测效果")</div></div>
+<h1 id="work">Work</h1>
+<p>脚踏实地，仰望星空</p>
+<h2 id="_1">项目实战</h2>
+<h2 id="xmapper">Xmapper数据可视化平台</h2>
+<h4 id="_2">项目内容</h4>
+<p>通过传感器数据，建立真实世界到数字3D世界的映射，获取空间，语义，趋势等信息。</p>
+<h4 id="_3">主要负责</h4>
+<p>实现4路avm摄像头+5路xpu摄像头+2路激光数据实时同步采集 。</p>
+<h4 id="_4">项目成果</h4>
+<p><img alt="image" src="https://github.com/E-Dreamer-LQ/material_accumulation/blob/main/perception.gif?raw=true" /></p>
+<p>a.基于视频压缩的传感器数据高帧率采集； b.基于数据前馈的时间同步方式； c.从采集到存储的完整数据链路打通； d.掌握多种技术（多进程与多线程，zmq通信，ptp同步，proto协议等）；</p>
+<h2 id="_5">立体感知传感器标定</h2>
+<h4 id="_6">项目内容</h4>
+<p>探索激光雷达标定新方法，简化标定流程并且减少标定精度影响因素，实现激光雷达标定自动化和激光雷达与相机的联合标定；</p>
+<h4 id="_7">工作内容</h4>
+<p>探索并实现高效的激光雷达标定方法；</p>
+<h4 id="_8">项目成果</h4>
+<p><img alt="image-20220320143139799" src="https://github.com/E-Dreamer-LQ/material_accumulation/blob/main/label.png?raw=true" /></p>
+<p>a.熟悉并掌握传统激光雷达标定方法； b.开发了基于平面法向量的激光雷达标定方法；</p>
+<h2 id="_9">虚拟仿真数据项目——数据生成链路</h2>
+<h4 id="_10">项目内容</h4>
+<p>基于渲染与数字3D世界内容，生成关键场景数据，利用虚拟数据释放人工标注成本，解决感知训练“长尾”问题，提高core case精度。</p>
+<h4 id="_11">工作内容</h4>
+<p>a.打通基于carla 与 UE4 引擎数据生成链路；</p>
+<p>b.利用GAN实现虚拟数据与真实数据的风格迁移训练；</p>
+<p>c. 基于faster rcnn完成虚拟数据对真实数据训练kpi初步验证；</p>
+<p>d. 基于UE5，脱离carla束缚，建立虚拟仿真数据生成平台；</p>
+<h4 id="_12">项目成果</h4>
+<p><img alt="image" src="https://github.com/E-Dreamer-LQ/material_accumulation/blob/main/ue4.gif?raw=true" /></p>
+<p>(注: 视频已经做压缩处理，分辨率会降低)</p>
+<p><img alt="image" src="https://github.com/E-Dreamer-LQ/material_accumulation/blob/main/ue5.gif?raw=true" /></p>
+<h2 id="_13">虚拟仿真数据项目——原子化交通流设计</h2>
+<h4 id="_14">项目内容</h4>
+<p>基于车辆运动学模型，原子化交通流设计，配合3d可视化技术，路网上实现简单交通流。</p>
+<h4 id="_15">工作内容</h4>
+<p>a.车流、路网可视化工具打造；</p>
+<p>b.idm跟车模型应用于原子化交通流；</p>
+<p>c. pure persuit 控制算法改善拐弯流畅性；</p>
+<h4 id="_16">项目成果</h4>
+<p><img alt="image-20220320151445824" src="https://github.com/E-Dreamer-LQ/material_accumulation/blob/main/traffic.gif?raw=true" /></p>
+<h2 id="tof">Tof手势识别项目</h2>
+<h4 id="_17">项目内容</h4>
+<p>推动tof传感器上车预研项目，构建tof 3d点云组成的“元宇宙”世界，实现手势识别及虚拟交互；</p>
+<h4 id="_18">工作内容</h4>
+<p>a.tof 传感器数据实时拿取并发送；</p>
+<p>b.基于yolov5的手势识别；</p>
+<h4 id="_19">项目成果</h4>
+<p><img alt="image-20220320151445824" src="https://github.com/E-Dreamer-LQ/material_accumulation/blob/main/tof_data.png?raw=true" /></p>
+<p><img alt="image" src="https://github.com/E-Dreamer-LQ/material_accumulation/blob/main/tof_demo.gif?raw=true" /></p>
+<h2 id="xbrain">xbrain自主运维自动驾驶集群小车项目</h2>
+<h4 id="_20">项目内容</h4>
+<p>基于数据闭环，目标打造一款场景覆盖度高，可靠性高，成本有充分竞争力的自主出行智能系统，建立自动驾驶集群小车，实现A到B的自主出行；</p>
+<h4 id="_21">工作内容</h4>
+<p>a.从python到cpp(ros2)的传感器数据、定位、规划、控制的闭环建立和迁移；</p>
+<p>b.基于lqr 和 pure pursuit算法的融合传感器信息避障循迹功能实现；</p>
+<h4 id="_22">项目成果</h4></div>
             </div>
         </div>
 
