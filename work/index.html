@@ -95,11 +95,11 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#_9" class="nav-link">虚拟仿真数据项目——数据生成链路</a>
+            <li class="nav-item" data-level="2"><a href="#_9" class="nav-link">虚拟仿真——数字孪生</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#_13" class="nav-link">虚拟仿真数据项目——原子化交通流设计</a>
+            <li class="nav-item" data-level="2"><a href="#_13" class="nav-link">虚拟仿真——原子化交通流设计</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -123,12 +123,18 @@
 <h2 id="_1">项目实战</h2>
 <h2 id="xmapper">Xmapper数据可视化平台</h2>
 <h4 id="_2">项目内容</h4>
-<p>通过传感器数据，建立真实世界到数字3D世界的映射，获取空间，语义，趋势等信息。</p>
+<p>通过传感器数据，建立真实世界到数字 3D 世界的映射，获取空间，语义，趋势等信息。</p>
 <h4 id="_3">主要负责</h4>
 <p>实现4路avm摄像头+5路xpu摄像头+2路激光数据实时同步采集 。</p>
 <h4 id="_4">项目成果</h4>
 <p><img alt="image" src="https://github.com/E-Dreamer-LQ/material_accumulation/blob/main/perception.gif?raw=true" /></p>
-<p>a.基于视频压缩的传感器数据高帧率采集； b.基于数据前馈的时间同步方式； c.从采集到存储的完整数据链路打通； d.掌握多种技术（多进程与多线程，zmq通信，ptp同步，proto协议等）；</p>
+<p>1.实现基于视频压缩的传感器数据高帧率采集；</p>
+<p>2.实现基于数据前馈的解决多传感器时间同步的创新算法；</p>
+<p>3.实现从采集到存储的完整数据链路打通；</p>
+<ol>
+<li>2d 及 3d 数据同时可视化平台建立；</li>
+<li>技术涉及：a. 传感器标定及时间同步；b.3d 点云网格算法；c.ptp 同步；d. 多线程多进程；</li>
+</ol>
 <h2 id="_5">立体感知传感器标定</h2>
 <h4 id="_6">项目内容</h4>
 <p>探索激光雷达标定新方法，简化标定流程并且减少标定精度影响因素，实现激光雷达标定自动化和激光雷达与相机的联合标定；</p>
@@ -137,33 +143,40 @@
 <h4 id="_8">项目成果</h4>
 <p><img alt="image-20220320143139799" src="https://github.com/E-Dreamer-LQ/material_accumulation/blob/main/label.png?raw=true" /></p>
 <p>a.熟悉并掌握传统激光雷达标定方法； b.开发了基于平面法向量的激光雷达标定方法；</p>
-<h2 id="_9">虚拟仿真数据项目——数据生成链路</h2>
+<h2 id="_9">虚拟仿真——数字孪生</h2>
 <h4 id="_10">项目内容</h4>
 <p>基于渲染与数字3D世界内容，生成关键场景数据，利用虚拟数据释放人工标注成本，解决感知训练“长尾”问题，提高core case精度。</p>
 <h4 id="_11">工作内容</h4>
-<p>a.打通基于carla 与 UE4 引擎数据生成链路；</p>
-<p>b.利用GAN实现虚拟数据与真实数据的风格迁移训练；</p>
-<p>c. 基于faster rcnn完成虚拟数据对真实数据训练kpi初步验证；</p>
-<p>d. 基于UE5，脱离carla束缚，建立虚拟仿真数据生成平台；</p>
+<p>1.利用 GAN 实现虚拟数据与真实数据的风格迁移训练；</p>
+<p>2.基于 faster rcnn 完成虚拟数据对真实数据训练 kpi 初步验证；</p>
+<ol>
+<li>基于 UE5, 脱离 carla 束缚，建立虚拟仿真数据生成平台；</li>
+<li>技术涉及：a.carla 引擎；b.UE5 开发；c.GAN 应用；d.faster rcnn；</li>
+</ol>
 <h4 id="_12">项目成果</h4>
 <p><img alt="image" src="https://github.com/E-Dreamer-LQ/material_accumulation/blob/main/ue4.gif?raw=true" /></p>
 <p>(注: 视频已经做压缩处理，分辨率会降低)</p>
 <p><img alt="image" src="https://github.com/E-Dreamer-LQ/material_accumulation/blob/main/ue5.gif?raw=true" /></p>
-<h2 id="_13">虚拟仿真数据项目——原子化交通流设计</h2>
+<h2 id="_13">虚拟仿真——原子化交通流设计</h2>
 <h4 id="_14">项目内容</h4>
-<p>基于车辆运动学模型，原子化交通流设计，配合3d可视化技术，路网上实现简单交通流。</p>
+<p>基于车辆运动学模型，原子化交通流设计，配合 3d 可视化技术，真实路网上实现虚拟交通流。</p>
 <h4 id="_15">工作内容</h4>
-<p>a.车流、路网可视化工具打造；</p>
-<p>b.idm跟车模型应用于原子化交通流；</p>
-<p>c. pure persuit 控制算法改善拐弯流畅性；</p>
+<p>1.“棋局式”泛化——车辆场景设计；
+2. idm 跟车模型应用于原子化交通流功能；
+3. pure persuit 控制算法改善拐弯流畅性；
+4. 技术涉及：a. 车辆动力学；b. idm 跟车模型；c. 控制算法；d. 场景泛化设计；</p>
 <h4 id="_16">项目成果</h4>
 <p><img alt="image-20220320151445824" src="https://github.com/E-Dreamer-LQ/material_accumulation/blob/main/traffic.gif?raw=true" /></p>
 <h2 id="tof">Tof手势识别项目</h2>
 <h4 id="_17">项目内容</h4>
-<p>推动tof传感器上车预研项目，构建tof 3d点云组成的“元宇宙”世界，实现手势识别及虚拟交互；</p>
+<p>推动 tof 传感器上车预研项目，构建 tof 3d 点云组成的“元宇宙”世界，实现手势识别及虚拟交互；主要负责 tof 传感器数据链路和基于 yolov5 的手势识别模块。</p>
 <h4 id="_18">工作内容</h4>
-<p>a.tof 传感器数据实时拿取并发送；</p>
-<p>b.基于yolov5的手势识别；</p>
+<p>1.实现 tof 传感器数据稳定 30fps 传输；</p>
+<ol>
+<li>应用 yolov5 集成手势识别功能；</li>
+<li>差帧算法实现实时手部连续跟踪；</li>
+<li>技术涉及：a. 多线程多进程；b.cpp sdk；c. 手势检测算法</li>
+</ol>
 <h4 id="_19">项目成果</h4>
 <p><img alt="image-20220320151445824" src="https://github.com/E-Dreamer-LQ/material_accumulation/blob/main/tof_data.png?raw=true" /></p>
 <p><img alt="image" src="https://github.com/E-Dreamer-LQ/material_accumulation/blob/main/tof_demo.gif?raw=true" /></p>
@@ -171,10 +184,12 @@
 <h4 id="_20">项目内容</h4>
 <p>基于数据闭环，目标打造一款场景覆盖度高，可靠性高，成本有充分竞争力的自主出行智能系统，建立自动驾驶集群小车，实现A到B的自主出行；</p>
 <h4 id="_21">工作内容</h4>
-<p>a.传感器数据、定位、规划、控制的闭环建立和迁移；</p>
-<p>b.从python到cpp(ros2)的版本迭代；</p>
-<p>c.基于lqr 和 pure pursuit算法的融合传感器信息避障循迹功能实现；</p>
-<h4 id="_22">项目成果</h4>
+<ol>
+<li>从 python 到 cpp(ros2) 的环境迁移，设计并建立传感器数据、定位、规划、控制的闭环；</li>
+<li>lane 级导航功能实现，基于 A* 算法的 A 到 B 的最短路径规划；</li>
+<li>基于 lqr 和 pure pursuit 算法的融合传感器数据信息避障循迹功能实现；</li>
+<li>技术涉及：a. 车辆动力学；b. 控制算法；c. 智能驾驶闭环；项目成果</li>
+</ol>
 <p><img alt="image" src="https://github.com/E-Dreamer-LQ/material_accumulation/blob/main/car.gif?raw=true" /></p></div>
             </div>
         </div>
